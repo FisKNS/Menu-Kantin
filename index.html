@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Kantin Bude</title>
     <style>
+        /* Reset dan styling dasar */
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             padding: 0;
@@ -12,17 +17,47 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
         }
+
         img {
-            width: 95%;
-            max-width: 600px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            width: 90%;
+            max-width: 700px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Responsif tambahan */
+        @media (max-width: 768px) {
+            img {
+                width: 95%;
+                max-width: 500px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                background-color: #fff;
+                padding: 20px;
+            }
+            img {
+                width: 100%;
+                max-width: 100%;
+                border-radius: 8px;
+                box-shadow: none;
+            }
         }
     </style>
 </head>
 <body>
-    <img src="https://github.com/FisKNS/Menu-Kantin/blob/346265b4ef024e08544f0a1a21f08a5faaa83953/menu.jpg" alt="Daftar Menu Kantin">
+    <img src="https://raw.githubusercontent.com/FisKNS/Menu-Kantin/main/menu.jpg" alt="Daftar Menu Kantin Bude">
 </body>
 </html>
